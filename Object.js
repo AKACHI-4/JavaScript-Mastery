@@ -102,17 +102,17 @@
 // only iterable types are able to spread other doesn't 
 
 // spread in Objects
-const obj1 = { 
-    key1 : "val1",
-    key2 : "val2",
-};
+// const obj1 = { 
+//     key1 : "val1",
+//     key2 : "val2",
+// };
 // same property can not come up more than two times counted 1 
 // always last value overwrite first one
-const obj2 = { 
-    key1 : "val11",
-    key4 : "val4",
-    key5 : "val5",
-};
+// const obj2 = { 
+//     key1 : "val11",
+//     key4 : "val4",
+//     key5 : "val5",
+// };
 
 // const newOb = {...obj1, ...obj2};
 // console.log(newOb); // { "key1": "val11", "key2": "val2", "key4": "val4", "key5": "val5" }
@@ -121,3 +121,47 @@ const obj2 = {
 // const newOb = {...obj2, ...obj1};
 // console.log(newOb); // { "key1": "val1", "key2": "val2", "key4": "val4", "key5": "val5" }
 
+// const newOb = {..."abc"};
+// console.log(newOb);
+
+// const band = {
+//     bandname: "led zaplin",
+//     famoussong: "stairway to heaven",   
+//     year: "1980",
+//     anotherfamoussong: "kashmir" 
+// }
+// Object destructuring
+// let { famoussong } = band; 
+// bandname = "queen"; 
+// console.log(bandname); 
+// console.log(famoussong);
+// let { bandname: var1, famoussong: var2, ...restprop} = band; 
+// bandname = "queen"; 
+// console.log(bandname); // error 
+// console.log(famoussong); // error
+// console.log(var1); 
+// console.log(var2); 
+// console.log(restprop); 
+// console.log(typeof restprop); 
+
+
+// const users = [
+//     {userid : 1, firstname: "Adarsh"},
+//     {userid : 2, firstname: "Anshul"},
+//     {userid : 3, firstname: "Akash"}
+// ]
+// for(let usr of users){
+//     console.log(usr); // usr(*object within object)
+//     console.log(typeof usr); object; 
+// }
+
+// Nested Destructuring 
+// const users = [
+//     {userid : 1, firstname: "Adarsh", gender: "male"},
+//     {userid : 2, firstname: "Anshul", gender: "male"},
+//     {userid : 3, firstname: "Anita", gender: "female"}
+// ]
+
+// const [ {firstname: usr1var1}, , {gender: usr3var3} ] = users; 
+// console.log(usr1var1); // Adarsh
+// console.log(usr3var3); // female
