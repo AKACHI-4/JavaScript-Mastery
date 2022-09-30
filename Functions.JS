@@ -67,3 +67,38 @@
 // console.log(val); // abc
 
 // function inside function 
+// const app = () => { 
+//     const myfun = () => {
+//         console.log("hello from myfunc");
+//     }
+
+//     const sum = (a,b) => {
+//         return a + b; 
+//     }
+
+//     const mul = (a,b) => { 
+//         return a * b; 
+//     }
+
+//     console.log("inside app");
+//     myfun();
+//     console.log(sum(1,2)); 
+//     console.log(mul(1,2)); 
+// }
+// app(); 
+
+
+// Lexical Scope
+function myapp(){
+    const myvar = "value1";
+    function myfun(){
+        const myvar = "value0";
+        console.log("inside myfun", myvar); 
+        // print value1 when myvar commented or value0 when myvar not commented 
+    }
+    // const myfunc = function(){}
+    // const myfunc2 = () => {}
+    console.log(myvar);
+    myfun();
+}
+myapp(); 
