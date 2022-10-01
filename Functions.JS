@@ -263,21 +263,3 @@
 // console.log(fun()); // HOLA if func2 is returning something
 
 // if a function taking function as input working on the inputted function and returning a function so these type of function is called higher order function
-
-// important array method
-
-// for each
-// map
-// filter
-// reduce
-
-
-const numbers = [1,2,3,4,5,6,7];
-
-function mulby2(number, idx){
-    console.log(`index: ${idx} value: ${number} value*2: ${number*2}`)
-}
-
-for(i=0;i<numbers.length;i++){
-    mulby2(numbers[i],i);
-}
