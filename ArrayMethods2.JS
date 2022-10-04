@@ -1,0 +1,213 @@
+// sort method 
+// ASCAII value
+
+// (	40	left parenthesis
+// )	41	right parenthesis
+// *	42	asterisk
+// +	43	plus sign
+// ,	44	comma
+// -	45	hyphen
+// .	46	period
+// /	47	slash
+
+// 0	48	digit 0
+// 1	49	digit 1
+// 2	50	digit 2
+// 3	51	digit 3
+// 4	52	digit 4
+// 5	53	digit 5
+// 6	54	digit 6
+// 7	55	digit 7
+// 8	56	digit 8
+// 9	57	digit 9
+
+// :	58	colon
+// ;	59	semicolon
+// <	60	less-than
+// =	61	equals-to
+// >	62	greater-than
+// ?	63	question mark
+// @	64	at sign
+
+// A	65	uppercase A
+// B	66	uppercase B
+// C	67	uppercase C
+// D	68	uppercase D
+// E	69	uppercase E
+// F	70	uppercase F
+// G	71	uppercase G
+// H	72	uppercase H
+// I	73	uppercase I
+// J	74	uppercase J
+// K	75	uppercase K
+// L	76	uppercase L
+// M	77	uppercase M
+// N	78	uppercase N
+// O	79	uppercase O
+// P	80	uppercase P
+// Q	81	uppercase Q
+// R	82	uppercase R
+// S	83	uppercase S
+// T	84	uppercase T
+// U	85	uppercase U
+// V	86	uppercase V
+// W	87	uppercase W
+// X	88	uppercase X
+// Y	89	uppercase Y
+// Z	90	uppercase Z
+
+// [	91	left square bracket
+// \	92	backslash
+// ]	93	right square bracket
+// ^	94	caret
+// _	95	underscore
+// `	96	grave accent
+
+// a	97	lowercase a
+// b	98	lowercase b
+// c	99	lowercase c
+// d	100	lowercase d
+// e	101	lowercase e
+// f	102	lowercase f
+// g	103	lowercase g
+// h	104	lowercase h
+// i	105	lowercase i
+// j	106	lowercase j
+// k	107	lowercase k
+// l	108	lowercase l
+// m	109	lowercase m
+// n	110	lowercase n
+// o	111	lowercase o
+// p	112	lowercase p
+// q	113	lowercase q
+// r	114	lowercase r
+// s	115	lowercase s
+// t	116	lowercase t
+// u	117	lowercase u
+// v	118	lowercase v
+// w	119	lowercase w
+// x	120	lowercase x
+// y	121	lowercase y
+// z	122	lowercase z
+
+// sort method ⏬
+
+// string sorting
+// const userNames = ['Max Part','Feliks Zemdegs','cubelelo','Tingman','erricto'];
+// userNames.sort(); // sort actual array means array is changed now 
+// console.log(userNames); // (5) ['Feliks Zemdegs', 'Max Part', 'Tingman', 'cubelelo', 'erricto']
+// work fine for same type-style string (either uppercase of lowercase) but it will not work for random type-style words and produce weird answer
+
+// 6,3,2,8,1
+// const numbers = [5,3,1200,400,3000];
+// numbers.sort(); // sort actual array means array is changed now 
+// console.log(numbers); // [1200, 3, 3000, 400, 5]
+ 
+// why this weird answer ? 
+// because when we sort in JS so it doesn't sort values as numbers but it takes values as string and then sort them ans string sorted with the help of ASCII CODE
+// Actual array - [5,3,1200,400,3000]
+// while process of sorting - ["5","3","1200","400","3000"]
+// [53, 51, 49, 52, 51] now JS solve it
+// In case of 2 or more digit number JS compiler only take ASCII of first digit and sort according them that's why we are getting weird answer But this method will efficiently work for single digit number  
+// [49, 51, 51, 52, 53] according to JS now our array is sorted 
+// [1200, 3, 3000, 400, 5]
+
+// Conclusion -> sort method sort valuea as per their ASCII codes
+
+// Solution: 
+// we can use callback into sort method so values will sort by our choice 
+// const numbers = [5,400,1200,9,3000];
+// numbers.sort((a,b)=>{
+//     return a-b; 
+// }); // ascending sort -> (5) [5, 9, 400, 1200, 3000]
+// numbers.sort((a,b)=>a-b); // concise writing pattern
+// numbers.sort((a,b)=>{
+//     return b-a; 
+// }); // descending sort -> (5) [3000, 1200, 400, 9, 5]
+// console.log(numbers); 
+
+// How callback works? 
+
+// a=1200, b=410 -> a-b = 790
+// a-b -> positive(greater than 0)
+// so a and b swapped their position in array -> 410,1200
+
+// a=200, b=410 -> a-b = -210
+// if a-b -> negative
+// so a and b will not swap their position in array -> 200,410
+
+// Flipkart Website: Price -> i. LowToHigh ii. HighToLow
+// const products = [
+//     {productID: 1, productName: "p1", price: 569},
+//     {productID: 2, productName: "p1", price: 150},
+//     {productID: 3, productName: "p1", price: 74},
+//     {productID: 4, productName: "p1", price: 1254},
+//     {productID: 5, productName: "p1", price: 789},
+// ]
+ 
+// and they have to sort in LowToHigh
+// products.sort(({price:a},{price:b})=>{
+//     return a-b;
+// });
+// products.sort((a,b)=>{
+//     return a.price-b.price;
+// });
+
+// but here it is changing complete product-list but I don't want to do so 
+// const ProductLowToHigh = products.slice(0).sort((a,b)=>{
+//     return a.price-b.price;
+// });
+// now Product-list remain same and stored in a new object in low to high manner
+// for(let pro of ProductLowToHigh)
+//     console.log(pro); 
+// print products as per their price from low to high
+
+
+// find Method ⏬
+
+// const myArr = ["Hello","cat","dog","lion"];
+
+// call back function
+// const Is3Length = (string) => string.length === 3;
+// console.log(Is3Length("cat")); // true
+
+// console.log(myArr.find((string) => string.length===3));
+
+// find() method use callback function
+// console.log(myArr.find(Is3Length));
+
+// const Users = [
+//     {userID: 1, userName: "tingboy"},
+//     {userID: 2, userName: "max"},
+//     {userID: 3, userName: "feliks"},
+//     {userID: 4, userName: "cubic"},
+//     {userID: 5, userName: "olar"},
+// ]
+ 
+// // out task is to find person having 4 userId
+
+// // const ans = Users.find( ({userID:ID,}) => ID===4);
+// // const ans = Users.find( (user) => user.userID===4); 
+// console.log(ans);
+
+// every Method ⏬
+
+const numbers = [2,4,6,8,10];
+// goal -> to check that in given array every element is even or not 
+// it also use callback function as argument 
+
+console.log(numbers.every((number)=>number%2===0)); // true
+// callback function return true or false according to condition 
+// every method is also return true or false
+
+const products = [
+    {productID: 1, productName: "p1", price: 569},
+    {productID: 2, productName: "p2", price: 150},
+    {productID: 3, productName: "p3", price: 74},
+    {productID: 4, productName: "p4", price: 1254},
+    {productID: 5, productName: "p5", price: 789},
+]
+// goal -> to check that every product's price < 1500
+
+console.log(products.every(({price:val}) => val<1500));
+console.log(products.every((product) => product.price<1500));
