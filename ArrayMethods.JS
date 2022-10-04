@@ -112,6 +112,6 @@
 
 // const totalPrice = usercart.reduce((accumulator,{price:currVal})=>{
 //     return accumulator + currVal; 
-// },0);
+// },0); // default parameter used here. 
 
 // console.log(totalPrice);
