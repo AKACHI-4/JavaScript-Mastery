@@ -192,22 +192,105 @@
 
 // every Method ⏬
 
-const numbers = [2,4,6,8,10];
+// const numbers = [2,4,6,8,10];
 // goal -> to check that in given array every element is even or not 
 // it also use callback function as argument 
 
-console.log(numbers.every((number)=>number%2===0)); // true
+// console.log(numbers.every((number)=>number%2===0)); // true
 // callback function return true or false according to condition 
 // every method is also return true or false
 
-const products = [
-    {productID: 1, productName: "p1", price: 569},
-    {productID: 2, productName: "p2", price: 150},
-    {productID: 3, productName: "p3", price: 74},
-    {productID: 4, productName: "p4", price: 1254},
-    {productID: 5, productName: "p5", price: 789},
-]
+// const products = [
+//     {productID: 1, productName: "p1", price: 569},
+//     {productID: 2, productName: "p2", price: 150},
+//     {productID: 3, productName: "p3", price: 74},
+//     {productID: 4, productName: "p4", price: 1254},
+//     {productID: 5, productName: "p5", price: 789},
+// ]
 // goal -> to check that every product's price < 1500
 
-console.log(products.every(({price:val}) => val<1500));
-console.log(products.every((product) => product.price<1500));
+// console.log(products.every(({price:val}) => val<1500));
+// console.log(products.every((product) => product.price<700));
+
+// Some Method ⏬
+
+// const numbers = [3,5,11,9]; 
+// kya ek bhi number esa hai jo even hai 
+
+// const ans = numbers.some((number)=>number%2===0);
+// if any one of the case function is true so it will return true otherwise false
+// console.log(ans);
+
+// const products = [
+//     {productID: 1, productName: "p1", price: 56900},
+//     {productID: 2, productName: "p2", price: 150000},
+//     {productID: 3, productName: "p3", price: 74000},
+//     {productID: 4, productName: "p4", price: 125400},
+//     {productID: 5, productName: "p5", price: 7890},
+// ]
+
+
+// fill method ⏬
+// value, start, end
+
+// UseCase - to fill array with same value under specific length array can be either filled or unfilled
+// const myArray = new Array(10).fill(-1); 
+// console.log(myArray);
+
+// const myArray = [1,2,3,4,5,6,7,8,9]; 
+// myArray.fill(0,2,5);
+// console.log(myArray);
+
+
+// Splice method ⏬
+// start, delete, insert 
+
+// used to insert and delete a specific length from array 
+
+// const myArray = ['item1','item2','item3','item4','item5'];
+
+// // for delete
+// // myArray.splice(1,1);
+// // console.log(myArray);
+
+// // On deletion we also can print deleted items in form of an array
+// const deleteditems = myArray.splice(1,2);
+// console.log("deleted items: ", deleteditems);
+
+// // To insert
+// myArray.splice(1,0,'item2','item3');
+// console.log(myArray);
+
+// // Insert and delete together/simultaneously
+// const deletedItems = myArray.splice(1,2,'inserted item1','inserted item2'); 
+// console.log('deleted items: ', deletedItems);
+// console.log(myArray);
+
+// Iterables ⏬
+// Jispe for of loop laga sakein -> string, array are iterable ex. Array, string are iterable.
+// object is not iterable
+ 
+// const firstName = "Adarsh"; 
+// for(let char of firstName){
+//     console.log(char); 
+// } // return all individual character as name sequence
+
+// const items = ['item1','item2','item3','item4']; 
+// for(let item of items){ 
+//     console.log(item); 
+// } // return all element of array items
+
+// const users = {'key1':'value1','key2':'value2'};
+// for(let item of users){
+//     console.log(item);
+// } // error - users is not iterable
+
+
+// Array Like objects ⏬
+// jinke pas length property hoti hai 
+// aur jinko hum index se access kar sakte hain 
+// ex - string 
+
+// const firstName = "Adarsh"; 
+// console.log(firstName.length); 
+// console.log(firstName[2]); 
