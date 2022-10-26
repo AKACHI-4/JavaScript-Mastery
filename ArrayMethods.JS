@@ -16,6 +16,8 @@
 // // }
 // // we can substitute this whole process just by using single foreach member function it will operated as same and take all elements one be one in sequential manner
 
+// // For each method ⏬
+
 // // numbers.forEach(mulby2); // for-each take callback as an input 
 // // const num = prompt("which table you want: ");
 // // // using anonymous function 
@@ -34,10 +36,9 @@
 // //     console.log("Name:", firstName + ", Age:", age);
 // // })
 
-// // map method
+// // map method ⏬
 
 // const numbers = [3,4,6,1,8];
-
 // // const square = (number) => {
 // //     console.log(number*number); 
 // // }
@@ -62,18 +63,17 @@
 //     {firstName: "Akachi", age: 17},
 //     {firstName: "Eva", age: 20},
 // ];
-
 // const username = users.map(({firstName}) => {
 //     return firstName;
 // });
 // const userage = users.map(({age:i}) => {
 //     return i;
 // });
-
 // console.log(username);
 // console.log(userage);
 
-// filter method
+// filter method ⏬
+
 // const numbers = [1,2,3,5,6,7,8];
 // const even = numbers.filter((number) => { 
 //     return number%2==0; 
