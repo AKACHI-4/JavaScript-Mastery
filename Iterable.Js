@@ -119,25 +119,95 @@
 // const person = new Map([['firstName', 'Adarsh'],['age',19],[1,'one']]); 
 // console.log(person); // Map(3) {'firstName' => 'Adarsh', 'age' => 19, 1 => 'one'}
 
-const person1 = {
-    id: 101, 
-    firstName: 'Adarsh'
-}
-const person2 = {
-    id: 102, 
-    firstName: 'Eva'
-}
+// const person1 = {
+//     id: 101, 
+//     firstName: 'Adarsh'
+// }
+// const person2 = {
+//     id: 102, 
+//     firstName: 'Eva'
+// }
 
-// I've store extra information for object but not in person1 somewhere else using map 
-const extraInfo = new Map(); 
-extraInfo.set(person1,{age: 18, gender: "male"});
-extraInfo.set(person2,{age: 7, gender: "female"});
+// // I've store extra information for object but not in person1 somewhere else using map 
+// const extraInfo = new Map(); 
+// extraInfo.set(person1,{age: 18, gender: "male"});
+// extraInfo.set(person2,{age: 7, gender: "female"});
 
-// console.log(extraInfo); // Map(1) {{…} => {…}}
-// console.log(person1.id); // 101
-// console.log(extraInfo.get(person1)); // {age: 8, gender: 'male'}
-console.log(extraInfo.get(person1).gender); // male
-console.log(extraInfo.get(person2).gender); // female
+// // console.log(extraInfo); // Map(1) {{…} => {…}}
+// // console.log(person1.id); // 101
+// // console.log(extraInfo.get(person1)); // {age: 8, gender: 'male'}
+// console.log(extraInfo.get(person1).gender); // male
+// console.log(extraInfo.get(person2).gender); // female
 
+// Clone using Object assign 
 
-// Real life Example of Map 
+// object stored in heap memory and obj and obj2 have its stored address
+// more clearly we can say that obj and obj2 have address of same object
+
+// const obj = {
+//     key1 : "value1",
+//     key2 : "value2"
+// }
+
+// const obj2 = obj;
+
+// console.log (obj); // {key1: 'value1', key2: 'value2'}
+// console.log (obj2); // {key1: 'value1', key2: 'value2'}
+
+// obj2.key3 = "value3"; 
+// // change will reflect in obj as well as object is same and obj and obj2 have its address stored
+
+// // change in obj2 will reflect in obj
+// console.log (obj); // {key1: 'value1', key2: 'value2', key3: 'value3'}
+// console.log (obj2); // {key1: 'value1', key2: 'value2', key3: 'value3'}
+
+// But if we want two seprate object or we can say clone of obj in obj2 to do so we use spread operators see below - 
+
+// cloning method-1
+// const obj2 = {...obj}; // spreading of obj in obj2 known as cloning
+// obj2.key3 = "value3"; 
+// // now here changes in obj2 will not reflect in obj as obj2 have clone of obj So..
+// console.log(obj); // {key1: 'value1', key2: 'value2'}
+// // no change in obj 
+// console.log(obj2); // {key1: 'value1', key2: 'value2', key3: 'value3'}
+
+// // cloning method-2
+// const obj2 = Object.assign({},obj); // old method but needs to be remembered 
+// obj2.key3 = "value3"; 
+// // changes will not reflect
+// console.log(obj); // {key1: 'value1', key2: 'value2'}
+// // no change in obj 
+// console.log(obj2); // {key1: 'value1', key2: 'value2', key3: 'value3'}
+
+// Optional Chaining ⏬
+
+// const user = {
+//     firstName: "Adarsh", 
+//     address: {houseNumber: '1234'}
+// }
+
+// console.log(user.firstName); // Adarsh
+// console.log(user.address); // {houseNumber: '1234'}
+// console.log(user.address.houseNumber); // '1234'
+
+// Currently property is not existing in our object but after few seconds it comes as property of object.... on such cases we use optional chaining
+// and to do so we use ?. which display undefined first and in future get change accordingly
+
+// without using ?. 
+
+// const user = {
+//     firstName: "Adarsh", 
+//     // address: {houseNumber: '1234'}
+// }
+// console.log(user.firstName); // Adarsh
+// console.log(user.address.houseNumber); // error
+
+// with using ?.
+
+// const user = {
+//     firstName: "Adarsh", 
+//     // address: {houseNumber: '1234'}
+// }
+// console.log(user.firstName); // Adarsh
+// console.log(user.address?.houseNumber); // no error now -> undefined
+
