@@ -93,7 +93,7 @@
 // sort method ⏬
 
 // string sorting
-// const userNames = ['Max Part','Feliks Zemdegs','cubelelo','Tingman','erricto'];
+// const userNames = ['Max Park','Feliks Zemdegs','cubelelo','Tingman','erricto'];
 // userNames.sort(); // sort actual array means array is changed now 
 // console.log(userNames); // (5) ['Feliks Zemdegs', 'Max Part', 'Tingman', 'cubelelo', 'erricto']
 // work fine for same type-style string (either uppercase of lowercase) but it will not work for random type-style words and produce weird answer
@@ -104,15 +104,15 @@
 // console.log(numbers); // [1200, 3, 3000, 400, 5]
  
 // why this weird answer ? 
-// because when we sort in JS so it doesn't sort values as numbers but it takes values as string and then sort them ans string sorted with the help of ASCII CODE
+// because when we sort in JS so it doesn't sort values as numbers but it takes values as string and then sort them, ans string sorted with the help of ASCII CODE
 // Actual array - [5,3,1200,400,3000]
 // while process of sorting - ["5","3","1200","400","3000"]
-// [53, 51, 49, 52, 51] now JS solve it
+// As per ASCII code - [53, 51, 49, 52, 51] now JS solve it
 // In case of 2 or more digit number JS compiler only take ASCII of first digit and sort according them that's why we are getting weird answer But this method will efficiently work for single digit number  
 // [49, 51, 51, 52, 53] according to JS now our array is sorted 
 // [1200, 3, 3000, 400, 5]
 
-// Conclusion -> sort method sort valuea as per their ASCII codes
+// Conclusion -> sort method sort values as per their ASCII codes
 
 // Solution: 
 // we can use callback into sort method so values will sort by our choice 
