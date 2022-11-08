@@ -15,7 +15,13 @@ a{
     color: white;
 }
 
-header{ 
+/* when browser reads css it reads it in top to down so if we put bg-dark (adding) class above base class so styles get overwrited and will not get seen in web page */
+/* .bg-dark{ 
+    background-color: black;
+    color: #eee;
+} */
+
+.header{ 
     position: relative;
     min-height: 50vh;
     background: url('./bg-image.jpg');
@@ -67,6 +73,11 @@ header{
     font-weight: 600;
 }
 
+.bg-dark{ 
+    background-color: black;
+    color: #eee;
+}
+
 .section-todo{
     margin-top: 5rem; 
     text-align: center;
@@ -77,6 +88,31 @@ header{
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
+}
+
+.todo-list{ 
+    text-align: left;
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+
+.todo-list li{
+    padding: 0.7rem;
+    background: rgb(5, 5, 63); 
+    color: #eee;
+    margin-top: 1rem; 
+    text-transform: capitalize;
+    font-weight: bold;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-btn{ 
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer; 
 }
 
 .form-todo input{ 
@@ -132,7 +168,8 @@ header{
 
 .signupBtn{ 
     background: #0e3154;
-    color: white; 
+    color: white;
+    font-size: medium;
     padding: 1rem 2rem; 
     display: block;
     margin: auto;
