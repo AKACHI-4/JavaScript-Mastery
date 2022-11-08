@@ -20,7 +20,16 @@
     <!-- To use defer in place of async -->
     <!-- <script src="./DOM_basic.js" defer></script> -->
     <!-- <script src="./DOM_use.js" defer></script> -->
-    <script src="./DOM_deep.js" defer></script>
+    <!-- <script src="./DOM_deep.js" defer></script> -->
+    <!-- <script src="./ClassList.js" defer></script> -->
+    <!-- <script src="./Add_HtmlElem.js" defer></script> -->
+    <!-- <script src="./List.js" defer></script> -->
+    <!-- <script src="./Events/Events.js" defer></script> -->
+    <!-- <script src="./Keypress_Mouseover.js" defer></script> -->
+    <!-- <script src="./Event_BCD.js" defer></script> -->
+    <script src="./project.js" defer></script>
+    
+
     <!-- here as browser reads defer he started to do same loading of JS and parsing of html together/simultaneously as in async method -->
     <!-- But the thing which is different here is even JS will completely load parsing will not stop. Means if Js load completely in between of parsing so it will not affect parsing as parsing will go for its completion and then after parsing completion browser executes JS file -->
     <!-- So This is the best method -->
@@ -40,7 +49,7 @@
     <title>Todo Website</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="nav container">
             <h1 class="logo">To Do</h1>
             <ul class="nav-items">
@@ -52,14 +61,28 @@
         <div class="headline">
             <h2 id="main-heading">Manage your task<span style="display: none;"> hello</span></h2>
             <button class="btn btn-headline">Learn more</button>
+            <!-- <button class="btn btn-headline" onclick="console.log('You Clicked Me!!')">Learn more</button> -->
         </div>
     </header>
     <section class="section-todo container">
         <h2>Your plan for today?</h2>
+        <!-- Todo Form -->
         <form class="form-todo">
             <input type="text" name="" id="" placeholder="Add Todo">
             <input type="submit" value="Add Todo" class="btn">
         </form>
+        
+        <ul class="todo-list">
+            <!-- <li class="first-todo">todo 1</li> -->
+            <!-- <li>Todo</li> -->
+            <li>
+                <span class="text">Do this Do that</span>
+                <div class="todo-buttons">
+                    <button class="todo-btn done">Done</button>
+                    <button class="todo-btn remove">Remove</button>
+                </div>
+            </li>
+        </ul>
     </section>
     <section class="section-signup container">
         <h2>Sign up</h2>
@@ -93,7 +116,7 @@
     </section>
     
     <!-- Way-2 -->
-    <script src="./102.js"></script>
+    <!-- <script src="./102.js"></script> -->
     <!-- What if we use here?? -->
     <!-- Browser did same for html file and JS file till excute JS file ( JS file : Load first then Execute ) and this time it get executed well because browser already parse full html till here -->
     <!-- But Limitation are here as well ->  Lets understand it with work done by browser to load full page -->
