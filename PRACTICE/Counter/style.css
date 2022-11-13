@@ -1,0 +1,47 @@
+*{ 
+    box-sizing: border-box;
+    /* The box-sizing CSS property sets how the total width and height of an element is calculated. */
+    margin: 0; 
+    padding: 0;     
+}
+
+body{ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.3rem;
+    background-image: url("https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{ 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainHeading{ 
+    color: green; 
+    margin: 1rem 0;
+}
+
+.currCount{ 
+    color: darkblue; 
+    font-size: 70px;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    margin: 0.5rem;
+    padding: 1rem 1.5rem; 
+    outline: none;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+    font-size: medium;
+}
+
+.btn:hover{ 
+    background-color: black;
+    color: white; 
+}
