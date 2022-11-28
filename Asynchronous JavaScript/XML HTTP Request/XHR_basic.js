@@ -18,7 +18,7 @@ const xhr = new XMLHttpRequest();
 // .opne("which type of request","request from where")
 xhr.open("GET",URL); // Task will done Asynchronoulsy
 
-// console.log(xhr.readyState); // 1 -	OPENED(open() has been called)
+// console.log(xhr.readyState); // 1 - OPENED(open() has been called)
 
 // so this thing will done by browser in background
 
