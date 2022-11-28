@@ -1,0 +1,6 @@
+ES6 modules came in ES 2015
+Using this we can split our code in multiple files 
+Which helps us to structuring and management of the code 
+
+HOW ?? 
+
