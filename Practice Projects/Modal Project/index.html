@@ -6,22 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-    <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
     <title>Modal Project</title>
 </head>
 <body>
-    <main>
-        <section class="container">
-            <div class="Modal">
-                <h1 class="Main-txt">Modal Project</h1>
-                <button class="opn-btn">OPEN MODAL</button>
-                <div class="Modal-content">
-                    <p class="content-txt">Modal Content</p>
-                    <button class="close-btn"><i class="fas fa-times"></i></button>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- hero -->
+    <header class="hero">
+        <div class="banner">
+            <h1>महाभारत</h1>
+            <button class="btn modal-btn">
+                open
+            </button>
+        </div>
+    </header>
+    <!-- Modal -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <h3>
+                यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।।
+                अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्।।
+            </h3>
+            <button class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
